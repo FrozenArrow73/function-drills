@@ -12,6 +12,10 @@
 */
 
 //CODE HERE
+function helloWorld() {
+  console.log("Hello, World!") 
+}
+helloWorld()
 
 
 ////////////////// PROBLEM 2 ////////////////////
@@ -21,6 +25,9 @@
 */
 
 //CODE HERE
+let jsNinja = () => "I am a JavaScript ninja!"
+
+console.log(jsNinja())
 
 
 ////////////////// PROBLEM 3 ////////////////////
@@ -31,6 +38,10 @@
 */
 
 //CODE HERE
+function printName(personName) {
+  console.log(personName)
+}
+printName("Derek")
 
 
 ////////////////// PROBLEM 4 ////////////////////
@@ -44,6 +55,10 @@
 */
 
 //CODE HERE
+function greeting(name){
+  console.log("Hello, " + name)
+}
+greeting("Sara")
 
 
 ////////////////// PROBLEM 5 ////////////////////
@@ -59,6 +74,9 @@
 
 //CODE HERE
 
+let compareNums = (num1, num2) => num1 > num2? num1: num2
+console.log(compareNums(11, 10))
+
 
 ////////////////// PROBLEM 6 ////////////////////
 /*
@@ -69,7 +87,13 @@
 */
 
 //CODE HERE
-
+function add (num1, num2) {
+  num1 = Number(num1)
+  num2 = Number(num2)
+  return num1 + num2
+}
+sum = add(5, 10)
+console.log(sum)
 
 ////////////////// PROBLEM 7 ////////////////////
 
@@ -84,7 +108,7 @@ const exclaim = function(str) {
 
 // console.log('arrow')
 // console.log('declaration')
-// console.log('expression')
+console.log('expression')
 
 
 
@@ -99,7 +123,7 @@ const exclaimTwo = str => {
   return str.toUpperCase() + '!!!'
 }
 
-// console.log('arrow')
+console.log('arrow')
 // console.log('declaration')
 // console.log('expression')
 
@@ -110,7 +134,8 @@ const exclaimTwo = str => {
   Brownie points if you use a template string
 */
 
-
+let exclaimThree = str => `${str.toUpperCase()}!!!` 
+console.log(exclaimThree("I am excited to code"))
 
 ////////////////// PROBLEM 9 ////////////////////
 
@@ -124,7 +149,7 @@ function exclaimFour(str) {
 }
 
 // console.log('arrow')
-// console.log('declaration')
+console.log('declaration')
 // console.log('expression')
 
 
@@ -138,8 +163,18 @@ function exclaimFour(str) {
 */
 
 //CODE HERE
+function nameCheck(name) {
+  if(name === "Steven") {
+    return "What is up Steven?"
+  } else if (name === "Bryan") {
+    return "Hey Bryan"
+  } else {
+    return `Cool name, ${name}`
+  }
+}
 
-
+let nameGreeting = nameCheck("Derek")
+console.log(nameGreeting)
 ////////////////// PROBLEM 11 ////////////////////
 /*
   Write a function called faveColorFinder that takes in one parameter called color (which will be a string).
@@ -151,7 +186,19 @@ function exclaimFour(str) {
 */
 
 //CODE HERE
-
+function faveColorFinder(color){
+  if ( color === "red") {
+    return 'red is a great color'
+  } else if (color === "green") {
+    return 'green is a solid favorite color'
+  } else if (color === "black") {
+    return 'so trendy'
+  } else {
+    return 'you need to evaluate your favorite color choice'
+  }
+}
+colorRating = faveColorFinder("green")
+console.log(colorRating)
 
 ////////////////// PROBLEM 12 ////////////////////
 let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
@@ -162,8 +209,12 @@ let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
 */
 
 //CODE HERE
-
-
+function printAllNames (names) {
+  for( i = 0; i < names.length; i++){
+    console.log(names[i])
+  }
+}
+printAllNames(namesArr)
 ////////////////// PROBLEM 13 ////////////////////
 /*
   Create a function called thatsOdd that takes in a single argument (a number).
