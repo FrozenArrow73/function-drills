@@ -224,6 +224,16 @@ printAllNames(namesArr)
 */
 
 //CODE HERE
+function thatsOdd(num1) {
+  if (num1 % 2 === 0) {
+    return "That's not odd!"
+  } else {
+    return 'That is odd indeed!'
+  }
+
+}
+let oddChecker = thatsOdd(35)
+console.log(oddChecker)
 
 
 ////////////////// PROBLEM 14 ////////////////////
@@ -237,7 +247,8 @@ printAllNames(namesArr)
 */
 
 //CODE HERE
-
+let bestMovie = (movie) => `${movie} is the best movie ever!`
+console.log(bestMovie("Sharknado"))
 
 ////////////////// PROBLEM 15 ////////////////////
 let bigOrSmallArray = [1,101, 102, 2, 103, 4, 5, 6, 107]
@@ -251,7 +262,20 @@ let bigOrSmallArray = [1,101, 102, 2, 103, 4, 5, 6, 107]
 */
 
 //CODE HERE
+function bigOrSmall(arr){
+  let answers = []
+  for(let i = 0; i < arr.length; i++) {
+    if (arr[i] > 100) {
+      answers.push("big")
+    } else {
+      answers.push("Small")
+    }
+  }
+  return answers
+}
 
+let arrayEvaluator = bigOrSmall(bigOrSmallArray)
+console.log(arrayEvaluator)
 
 ////////////////// PROBLEM 16 ////////////////////
 let contestants = ['Katniss', 'Peeta', 'Fox-face', 'Glimmer', 'Cato', 'Rue', 'Thresh', 'Clove', 'Marvel']
@@ -262,6 +286,7 @@ let loser = 'Glimmer'
 */
 
 //CODE HERE
+
 
 
 ////////////////// PROBLEM 17 ////////////////////
