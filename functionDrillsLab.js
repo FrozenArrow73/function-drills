@@ -286,7 +286,15 @@ let loser = 'Glimmer'
 */
 
 //CODE HERE
-
+function theEliminator(arr, dead){
+  for(let i = 0; i < arr.length; i++){
+    if (arr[i] === dead) {
+       arr.splice(i, 1)
+    }
+  }
+  return arr
+}
+console.log(theEliminator(contestants, loser))
 
 
 ////////////////// PROBLEM 17 ////////////////////
@@ -297,7 +305,10 @@ let sampleString = "Hi, my name is Kylo."
 */
 
 //CODE HERE
-
+function logUpperCase(s) {
+  console.log(s.toUpperCase())
+}
+logUpperCase(sampleString)
 
 ////////////////// PROBLEM 18 ////////////////////
 /*
@@ -310,6 +321,22 @@ let sampleString = "Hi, my name is Kylo."
   return 'must provide a valid email address'
 */
 
+//CODE HERE
+function emailCheck(email) {
+  email = String(email)
+  email = email.trim(" ")
+  if (email.includes("@")) {
+    return "email verified"
+  } else {
+    return "must provide a valid email address"
+  }
+
+  }
+
+  console.log(emailCheck(`  goose${73}@gmail.com  `))
+
+
+
 ////////////////// PROBLEM 19 ////////////////////
 /*
   Write a function, naming it whatever you believe to be appropriate, that buys as many chocolate frogs as possible with a certain amount of gold. Each chocolate frog costs 3 gold. Your function should take in a single parameter, which is the amount of gold you are willing to spend. Your function should return a total amount of chocolate frogs you were able to purchase.
@@ -317,6 +344,11 @@ let sampleString = "Hi, my name is Kylo."
 */
 
 //CODE HERE
+function chocolateStore(num1){
+  return Math.floor(num1 / 3)
+}
+let totalFrogs = chocolateStore(10)
+console.log(totalFrogs)
 
 
 ////////////////// PROBLEM 20 ////////////////////
@@ -325,6 +357,11 @@ let sampleString = "Hi, my name is Kylo."
 */
 
 //CODE HERE
+function chocolateStore2(num1){
+  return Math.floor(num1 / 3)
+}
+let totalFrogs2 = chocolateStore2(4)
+console.log(totalFrogs2)
 
 
 ////////////////// PROBLEM 21 ////////////////////
@@ -334,6 +371,20 @@ let sampleArray = [0,1,2,3,4,7,5,6,8,9]
 */
 
 //CODE HERE
+function arrayGoUp(arr) {
+  let doesGoUp = false
+  for(let i = 0; i < arr.length; i++){
+    if (i + 1 !== arr.length) {
+      if (arr[i] <= arr[i + 1]) {
+        doesGoUp = true
+      } else if ( arr[i] > arr[i+1])
+        return false
+    }
+  }
+  return doesGoUp 
+}
+let arrayIsAscending = arrayGoUp(sampleArray)
+console.log(arrayIsAscending)
 
 
 ////////////////// PROBLEM 22 ////////////////////
@@ -358,13 +409,13 @@ function pond() {
 */
 
 //This array should contain the variable names (as strings) accessible in the global scope.
-let globalScope = []
+let globalScope = ["cute"]
 
 //This array should contain the variable names (as strings) accessible in the bathroom function.
-let bathroomScope = []
+let bathroomScope = ["cute", "squeaky"]
 
 //This array should contain the variable names (as strings) accessible in the bathtub function.
-let bathtubScope = []
+let bathtubScope = ["cute", "squeaky", "nautical"]
 
 //This array should contain the variable names (as strings) accessible in the pond function.
-let pondScope = []
+let pondScope = ["cute", "fluffy"]
